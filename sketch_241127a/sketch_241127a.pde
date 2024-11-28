@@ -21,5 +21,7 @@ void draw() {
     rect( i,232, 38, 200);
     i = i + 40;
   }
-  
+   //computer 
+    //keyboard 
+    
   }
