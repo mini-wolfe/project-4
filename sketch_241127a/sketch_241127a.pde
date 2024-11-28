@@ -3,9 +3,7 @@ void setup() {
  
 }
 
-void draw() {
-  
-
+void draw() { 
   //draw wall for background
   //top half of wallpaper
   noStroke();
@@ -18,8 +16,8 @@ void draw() {
   fill(237, 237, 240);
   rect(0, height/2, 600, 30);
   //panels
-   int i = 200;
-    while (i > 100) {
+   int i = 0;
+    while (i < 600) {
     rect( i,232, 38, 200);
     i = i + 40;
   }
