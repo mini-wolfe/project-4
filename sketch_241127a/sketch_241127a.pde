@@ -44,7 +44,9 @@ void draw() {
   rect(158, 50, 295, 200);
   //keyboard
   
- noStroke();
- fill(255);
-  triangle(mouseX,mouseY,mouseX+15,mouseY+15,mouseX+10,mouseY+10);
+  //cursor
+  stroke(0);
+  strokeWeight(0.5);
+  fill(255);
+  triangle(5,5,15,10,10,15);
 }
