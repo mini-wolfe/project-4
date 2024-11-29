@@ -31,14 +31,20 @@ void draw() {
   //table
   //computer
   fill(222, 217, 217);
-  rect(148, 85, 300, 250);
-
-  stroke(197, 194, 194);
+  rect( 134, 15, 345, 295);
+  //make it make sense
   strokeWeight(5);
-  strokeCap(ROUND);
-  line(148, 85, 148, 335);
-  line(448, 85, 448, 335);
-
-
+  stroke(222, 217, 217);
+  rect(128, 40, 5, 240);
+  rect(478, 40, 5, 240);
+  //screen
+ strokeWeight(5);
+  stroke(152,134,134);
+  fill(0);
+  rect(158, 50, 295, 200);
   //keyboard
+  
+ noStroke();
+ fill(255);
+  triangle(mouseX,mouseY,mouseX+15,mouseY+15,mouseX+10,mouseY+10);
 }
