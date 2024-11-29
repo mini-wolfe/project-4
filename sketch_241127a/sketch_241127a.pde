@@ -36,7 +36,7 @@ void draw() {
   strokeWeight(5);
   stroke(222, 217, 217);
   rect(128, 40, 5, 240);
-  rect(478, 40, 5, 240);
+  rect(479, 40, 5, 240);
   //screen
  strokeWeight(5);
   stroke(152,134,134);
@@ -44,9 +44,8 @@ void draw() {
   rect(158, 50, 295, 200);
   //keyboard
   
-  //cursor
-  stroke(0);
-  strokeWeight(0.5);
-  fill(255);
-  triangle(5,5,15,10,10,15);
+ 
+  
 }
+//assests used 
+//https://beamedeighth.itch.io/simplekeys-animated-pixel-keyboard-keys
