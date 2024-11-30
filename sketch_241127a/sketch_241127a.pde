@@ -44,8 +44,6 @@ void draw() {
   rect(158, 50, 295, 200);
   //keyboard
   
- 
-  
+
 }
 //assests used 
-//https://beamedeighth.itch.io/simplekeys-animated-pixel-keyboard-keys
