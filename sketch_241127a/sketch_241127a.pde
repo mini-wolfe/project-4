@@ -1,5 +1,10 @@
+
+PImage keys;
+
 void setup() {
   size(600, 400);
+  imageMode(CENTER);
+  keys = loadImage("keys");
 }
 
 void draw() {
@@ -43,7 +48,7 @@ void draw() {
   fill(0);
   rect(158, 50, 295, 200);
   //keyboard
-  
+  image(keys,width/2,height/2);
 
 }
 //assests used 
