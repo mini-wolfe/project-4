@@ -4,7 +4,7 @@ PImage keys;
 void setup() {
   size(600, 400);
   imageMode(CENTER);
-  keys = loadImage("keys");
+  keys = loadImage("keys.png");
 }
 
 void draw() {
