@@ -1,13 +1,16 @@
 
 PImage keys;
+Program program;
 
 void setup() {
   size(600, 400);
   imageMode(CENTER);
   keys = loadImage("keys.png");
+  program = new Program();
 }
 
 void draw() {
+  println(mouseX);
   //draw wall for background
   //top half of wallpaper
   noStroke();
@@ -49,11 +52,17 @@ void draw() {
   rect(158, 50, 295, 200);
   //keyboard
   image(keys,width/2,height/2);
-  //processing button 
+  //processing imation button blue square
   noStroke();
   fill(120,178,224);
   rect(180,110,10,10);
-  
-
+  //display program when trigger box is hit 
+ 
+if(mouseX <= 180+10 && mouseX >=180-10) {
+  if(mouseY >= 110-10 && mouseY <=180+10){
+  println("both");
+  program.display();
+  }
+ }
 }
 //assests used 

@@ -4,5 +4,10 @@ class Program {
   Program(){
     blank = loadImage("blankassigmentpage.png");
   }
+void display(){
+ image(blank,width/2,height/2);
+}
+  
+  
   
 }
