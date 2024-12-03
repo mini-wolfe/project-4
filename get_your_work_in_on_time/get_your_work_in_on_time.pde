@@ -1,12 +1,18 @@
 
 PImage keys;
 Program program;
-
+ArrayList<Particles> particlelist = new ArrayList<Particles>();
 void setup() {
   size(600, 400);
   imageMode(CENTER);
   keys = loadImage("keys.png");
   program = new Program();
+
+  //making partcle work pls
+  for (int i = 0; i < 20; i ++) {
+    Particles p = new Particles();
+    particlelist.add(p);
+  }
 }
 
 void draw() {
@@ -46,23 +52,28 @@ void draw() {
   rect(128, 40, 5, 240);
   rect(479, 40, 5, 240);
   //screen
- strokeWeight(5);
-  stroke(152,134,134);
+  strokeWeight(5);
+  stroke(152, 134, 134);
   fill(0);
   rect(158, 50, 295, 200);
   //keyboard
-  image(keys,width/2,height/2);
+  image(keys, width/2, height/2);
   //processing imation button blue square
   noStroke();
-  fill(120,178,224);
-  rect(180,110,10,10);
-  //display program when trigger box is hit 
- 
-if(mouseX <= 180+10 && mouseX >=180-10) {
-  if(mouseY >= 110-10 && mouseY <=180+10){
-  println("both");
-  program.display();
+  fill(120, 178, 224);
+  rect(180, 110, 10, 10);
+  //display program when trigger box is hit
+
+  if (mouseX <= 180+10 && mouseX >=180-10) {
+    if (mouseY >= 110-10 && mouseY <=180+10) {
+      println("both");
+      program.display();
+    }
   }
- }
+  //loop for displaying and updating particles
+  for (Particles p : particlelist) {
+    p.display();
+    p.update();
+  }
 }
-//assests used 
+//assests used
