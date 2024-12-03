@@ -49,6 +49,11 @@ void draw() {
   rect(158, 50, 295, 200);
   //keyboard
   image(keys,width/2,height/2);
+  //processing button 
+  noStroke();
+  fill(120,178,224);
+  rect(180,110,10,10);
+  
 
 }
 //assests used 
