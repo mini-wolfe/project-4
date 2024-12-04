@@ -7,12 +7,12 @@ class Particles {
 
   Particles() {
     size = random(5, 15);
-    position.x = random(0, 600);
+    position.x = random(0,600);
     position.y = 400;
     velocity.y = random(1, 5);
     velocity.x = random(1, 3);
-    acceleration.y = random(-0.2, -0.3);
-    acceleration.x = random(-0.2, 0.3);
+    acceleration.y = random(-0.2, -0.5);
+    acceleration.x = random(-0.2, 0.5);
   }
 
   void display() {
