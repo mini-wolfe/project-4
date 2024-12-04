@@ -6,7 +6,7 @@ class Program {
     blank = loadImage("blankassigmentpage.png");
   }
 void display(){
- image(blank,width/2,height/2);
+ image(blank,300,200,400,300);
 }
   void update() {
     
