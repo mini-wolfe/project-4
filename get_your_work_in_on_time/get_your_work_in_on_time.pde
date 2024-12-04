@@ -1,4 +1,3 @@
-
 PImage keys;
 Program program;
 ArrayList<Particles> particlelist = new ArrayList<Particles>();
@@ -9,9 +8,10 @@ void setup() {
   program = new Program();
 
   //making partcle work pls
-  for (int i = 0; i < 20; i ++) {
+  for (int i = 0; i < 15; i ++) {
     Particles p = new Particles();
     particlelist.add(p);
+    
   }
 }
 
@@ -57,7 +57,7 @@ void draw() {
   fill(0);
   rect(158, 50, 295, 200);
   //keyboard
-  image(keys, width/2, height/2);
+  image(keys, width/2, 150); 
   //processing imation button blue square
   noStroke();
   fill(120, 178, 224);

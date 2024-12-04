@@ -7,12 +7,12 @@ class Particles {
 
   Particles() {
     size = random(5, 15);
-    position.x = random(0,600);
+    position.x = random(0, 600);
     position.y = 400;
     velocity.y = random(1, 5);
     velocity.x = random(1, 3);
-    acceleration.y = random(-0.2, -0.5);
-    acceleration.x = random(-0.2, 0.5);
+    acceleration.y = random(-0.1, -0.5);
+    acceleration.x = random(-0.1, 0.5);
   }
 
   void display() {
@@ -25,6 +25,9 @@ class Particles {
     //updating boarders and velocity so particals reset instead of flying of screen responing them and resetting the velocity
     if (position.y < 0) {
       position.y = 600;
+      position.x = random(0, 600);
+      acceleration.y = random(-0.1, -0.5);
+      acceleration.x = random(-0.1, 0.5);
       velocity = new PVector();
     }
   }
