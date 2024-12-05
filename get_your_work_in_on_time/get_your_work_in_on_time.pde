@@ -1,3 +1,6 @@
+int timer = 30;
+boolean isdisplaying = false;
+float starttime = 0;
 PImage keys;
 Program program;
 ArrayList<Particles> particlelist = new ArrayList<Particles>();
@@ -64,16 +67,19 @@ void draw() {
   rect(180, 110, 10, 10);
   //display program when trigger box is hit
 
-  if (mouseX <= 180+10 && mouseX >=180-10) {
-    if (mouseY >= 110-10 && mouseY <=180+10) {
-      println("both");
-      program.display();
-    }
-  }
   //loop for displaying and updating particles
   for (Particles p : particlelist) {
     p.display();
     p.update();
+  }
+}
+
+void mousePressed(){
+if (mouseX <= 180+10 && mouseX >=180-10) {
+    if (mouseY >= 110-10 && mouseY <=180+10) {
+      println("both");
+      program.display();
+    }
   }
 }
 //assests used
