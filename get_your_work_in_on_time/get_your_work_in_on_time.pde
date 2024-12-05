@@ -69,7 +69,7 @@ void draw() {
   //timer if statment for program display
   if (isdisplaying == true) {
     program.display();
-    if (frameCount - starttime % 1800 == 0) {
+    if (frameCount - starttime > 1800) {
       isdisplaying  = false;
     }
   }
