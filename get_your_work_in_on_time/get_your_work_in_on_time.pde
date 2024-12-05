@@ -48,17 +48,17 @@ void draw() {
   //table
   //computer
   fill(222, 217, 217);
-  rect( 134, 15, 345, 295);
+  rect( 65, 15, 475, 375);
   //make it make sense
   strokeWeight(5);
   stroke(222, 217, 217);
-  rect(128, 40, 5, 240);
-  rect(479, 40, 5, 240);
+  rect(45, 45, 25, 310);
+  rect(533, 45, 25, 310);
   //screen
   strokeWeight(5);
   stroke(152, 134, 134);
-  fill(0);
-  rect(158, 50, 295, 200);
+  fill(114, 135, 216);
+  rect(100, 35, 390, 325);
   //keyboard
   image(keys, width/2, 150);
   //processing imation button blue square
