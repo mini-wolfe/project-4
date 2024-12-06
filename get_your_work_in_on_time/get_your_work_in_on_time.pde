@@ -58,9 +58,11 @@ void draw() {
   strokeWeight(5);
   stroke(152, 134, 134);
   fill(114, 135, 216);
-  rect(100, 35, 390, 325);
+  rect(104, 35, 390, 325);
+  noStroke();
+  fill(179, 183, 224);
+  rect(108, 39, 20, 320);
   //keyboard
-  image(keys, width/2, 150);
   //processing imation button blue square
   noStroke();
   fill(120, 178, 224);
