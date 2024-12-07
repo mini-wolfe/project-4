@@ -93,7 +93,8 @@ void draw() {
     p.update();
   }
   gamepage.display();
-   playgame.copy(289,525, 305, 8, 50, 50,305,8);
+ //image(playgame,285,384);
+  copy(playgame,285,384, 305, 8, 50, 50,305,8);
 }
 
 void mousePressed() {
