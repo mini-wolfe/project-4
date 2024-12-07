@@ -1,15 +1,21 @@
 
-boolean isdisplaying = false;
-float starttime = 0;
-PImage keys;
 Program program;
 ArrayList<Particles> particlelist = new ArrayList<Particles>();
+//playing game variables
+ArrayList<Gamemode> codelist = new ArrayList<Gamemode>();
+int linedrawn;
+//display variables
+boolean isdisplaying = false;
+float starttime = 0;
+
+
 void setup() {
   frameRate(60);
   size(600, 400);
   imageMode(CENTER);
-  keys = loadImage("keys.png");
+
   program = new Program();
+  //setting up gamemode images
 
   //making partcle work pls
   for (int i = 0; i < 15; i ++) {
