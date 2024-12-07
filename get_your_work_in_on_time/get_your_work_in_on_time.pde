@@ -2,21 +2,26 @@
 Program program;
 ArrayList<Particles> particlelist = new ArrayList<Particles>();
 //playing game variables
+PImage playgame;
 ArrayList<Gamemode> codelist = new ArrayList<Gamemode>();
-int linedrawn;
+int linedrawn = 15;
+Gamemode gamepage;
 //display variables
 boolean isdisplaying = false;
 float starttime = 0;
+
 
 
 void setup() {
   frameRate(60);
   size(600, 400);
   imageMode(CENTER);
-
+  gamepage = new Gamemode(1);
   program = new Program();
+  playgame = loadImage("codingcor4change.png");
   //setting up gamemode images
-
+ playgame.resize(289,525);
+   
   //making partcle work pls
   for (int i = 0; i < 15; i ++) {
     Particles p = new Particles();
@@ -25,6 +30,7 @@ void setup() {
 }
 
 void draw() {
+
   println(mouseX);
   //draw wall for background
   //top half of wallpaper
@@ -86,6 +92,8 @@ void draw() {
     p.display();
     p.update();
   }
+  gamepage.display();
+   playgame.copy(289,525, 305, 8, 50, 50,305,8);
 }
 
 void mousePressed() {
