@@ -2,13 +2,17 @@ class Gamemode {
   int ImageHeight;
   
 
-  Gamemode(int y) {
-   
-    ImageHeight = y;
+  Gamemode() {
+   //int y
+   // ImageHeight = y;
   }
  
-  void display() {
-   // image(playgame,289,525,305,800);
- //playgame.copy(289,525, 305, 56, 50, 50,305,56);
+  void display(int y) {
+ for(int i = 0; i < codelist.size(); i ++){
+  copy(playgame,0, y *8, 305, 8, 150,120 + i * 8,305,8);
+y ++;
+ }
+ 
+
   }
 }

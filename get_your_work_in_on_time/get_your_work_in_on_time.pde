@@ -4,19 +4,20 @@ ArrayList<Particles> particlelist = new ArrayList<Particles>();
 //playing game variables
 PImage playgame;
 ArrayList<Gamemode> codelist = new ArrayList<Gamemode>();
-int linedrawn = 15;
+int linedrawn = 0;
 Gamemode gamepage;
 //display variables
 boolean isdisplaying = false;
 float starttime = 0;
-
-
+//win or lose 
+boolean trains = false;
+int lose;
 
 void setup() {
   frameRate(60);
   size(600, 400);
   imageMode(CENTER);
-  gamepage = new Gamemode(1);
+  gamepage = new Gamemode();
   program = new Program();
   playgame = loadImage("codingcor4change.png");
   //setting up gamemode images
@@ -30,8 +31,6 @@ void setup() {
 }
 
 void draw() {
-
-  println(mouseX);
   //draw wall for background
   //top half of wallpaper
   noStroke();
@@ -83,18 +82,21 @@ void draw() {
   //timer if statment for program display
   if (isdisplaying == true) {
     program.display();
-    if (frameCount - starttime > 1800) {
+    if (frameCount - starttime > 240) {
       isdisplaying  = false;
-    }
+  
+      }
   }
   //loop for displaying and updating particles
   for (Particles p : particlelist) {
     p.display();
     p.update();
   }
-  gamepage.display();
+  gamepage.display(linedrawn);
  //image(playgame,285,384);
-  copy(playgame,285,384, 305, 8, 50, 50,305,8);
+ 
+ 
+ 
 }
 
 void mousePressed() {
@@ -102,8 +104,18 @@ void mousePressed() {
     if (mouseY >= 110-10 && mouseY <=180+10) {
       starttime = frameCount;
       isdisplaying = true;
+      trains = true;
     }
   }
 }
+void keyPressed(){
+  if(codelist.size() == 17){
+  codelist.remove(0);
+  }
+codelist.add(new Gamemode());
+linedrawn+=1;
+}
+
+
 //assests used
 //https://illugion.itch.io/pixel-keyboard-lite
