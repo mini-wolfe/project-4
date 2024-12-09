@@ -1,35 +1,49 @@
 //initializing image for program , this is a blank processing imaage for the player to "write: their code over. initilizing class im main tab
 Program program;
 //initizilizing partical array for partical 
+//particals will be implemented to creat asmosphere, i want the atmostphere to almost be tense as alot of studdents feel pressed for time or stressed while ddoing home work
+//the dust adds to creating an uncomfotable messy enviroment to make the feel more pressed aand uncomfortable while "doing there home  work"
+//this is the first array list conected to the partical tab calling on the cleaar get squares in the array to repeat and disperse throughout the game 
 ArrayList<Particles> particlelist = new ArrayList<Particles>();
-//playing game variables
+//playing game variables, game mode ,array list ,intigers class/object
+//calling on pimaage gaamemode , a list of previous code i had written 
 PImage playgame;
+//this is an array list that contains the copys of the indivigual lines of code it is used to switch between lines being displayed while also adding lines to make it look like the player is coding an asssigment in a set amount of time  
 ArrayList<Gamemode> codelist = new ArrayList<Gamemode>();
+//integer to acount for the line being drawn by copy in the array list so that we are always adding to the current line being drawn 
 int linedrawn = 0;
+//initiating the object
 Gamemode gamepage;
 //display variables
 boolean isdisplaying = false;
+//float for display limit on the processing page
 float starttime = 0;
 //win or lose 
-//win loss condistion for displaying the final screen 
+//win loss condistion for displaying the final screen
+//the boolean trains will tell us weather or not to restart the game and play the restart button set to fasle till the player win or looses 
 boolean trains = false;
 int lose;
 PImage A;
 PImage F;
 
 void setup() {
+  //i change the frame rate to account for the time limit on the processing image using multiples of 60 to be able to calculate the seconds the screen is being displayed for 
   frameRate(60);
   size(600, 400);
   imageMode(CENTER);
+  //initizlizing game mode in the main screen
   gamepage = new Gamemode();
+//initilizing pimaage program on the main screeen
   program = new Program();
+ // inizilizing image for codelist array
   playgame = loadImage("codingcor4change.png");
- A = loadImage("sucess.jpeg");
- F = loadImage("Failure.jpeg");
-  //setting up gamemode images
+  //initilising end screens ,failure and sucess
+ A = loadImage("success.jpeg");
+ F = loadImage("failure.jpeg");
+  //setting up gamemode images resizing to fit in the blank paart of the pimage
  playgame.resize(289,525);
    
-  //making partcle work pls
+  //making partcle work making a for loop to call on the limits of the array ther are 15 particles, adding back the particals removing the acceleratiion 
   for (int i = 0; i < 15; i ++) {
     Particles p = new Particles();
     particlelist.add(p);
@@ -45,8 +59,6 @@ void draw() {
   //bottom half of wall paper
   fill(223, 224, 237);
   rect(0, height/2, 600, 225);
-  //shadow
-
   //divder
   fill(237, 237, 240);
   rect(0, height/2, 600, 30);
@@ -77,15 +89,13 @@ void draw() {
   fill(114, 135, 216);
   rect(104, 35, 390, 325);
   noStroke();
-  fill(179, 183, 224);
-  rect(108, 39, 20, 320);
-  //keyboard
-  //processing imation button blue square
+  //processing imation button blue square/ start the program
   noStroke();
   fill(120, 178, 224);
   rect(180, 110, 10, 10);
   //display program when trigger box is hit
   //timer if statment for program display
+  // keep the program open for 10 ish seconds
   if (isdisplaying == true) {
     program.display();
     if (frameCount - starttime > 240) {
@@ -99,14 +109,17 @@ void draw() {
     p.display();
     p.update();
   }
+  //calling on objects in the array to display lines of "code" based on line drawn
   gamepage.display(linedrawn);
- //image(playgame,285,384);
+ 
  
  
  
 }
 
 void mousePressed() {
+  
+ // pressinng the processing progam to start the game
   if (mouseX <= 180+10 && mouseX >=180-10) {
     if (mouseY >= 110-10 && mouseY <=180+10) {
       starttime = frameCount;
@@ -116,6 +129,7 @@ void mousePressed() {
   }
 }
 void keyPressed(){
+  //when key presesed display next copy from the array list untill line 17 then delete first image in the list and replace bottom image as the code moves upwardes
   if(codelist.size() == 17){
   codelist.remove(0);
   }

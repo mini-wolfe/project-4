@@ -1,4 +1,6 @@
 class Particles {
+  //arguments for partivle class
+  //adding speed acceleration and position
   float size;
   PVector acceleration = new PVector();
   PVector velocity = new PVector();
@@ -6,6 +8,7 @@ class Particles {
 
 
   Particles() {
+    //start the particles at the base of the screen have them accelerate to the top then reset with out the current velocity or acceleration 
     size = random(5, 15);
     position.x = random(0, 600);
     position.y = 400;
