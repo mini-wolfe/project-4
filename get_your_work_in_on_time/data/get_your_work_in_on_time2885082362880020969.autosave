@@ -1,6 +1,5 @@
-//initializing image for program , this is a blank processing imaage for the player to "write: their code over. initilizing class im main tab
+
 Program program;
-//initizilizing partical array for partical 
 ArrayList<Particles> particlelist = new ArrayList<Particles>();
 //playing game variables
 PImage playgame;
@@ -10,12 +9,13 @@ Gamemode gamepage;
 //display variables
 boolean isdisplaying = false;
 float starttime = 0;
+
 //win or lose 
-//win loss condistion for displaying the final screen 
 boolean trains = false;
-int lose;
+int screenshown = 0;
 PImage A;
-PImage F;
+PImage f;
+endstate endstateA;
 
 void setup() {
   frameRate(60);
@@ -23,9 +23,11 @@ void setup() {
   imageMode(CENTER);
   gamepage = new Gamemode();
   program = new Program();
+  endstateA = new endstate();
   playgame = loadImage("codingcor4change.png");
- A = loadImage("sucess.jpeg");
- F = loadImage("Failure.jpeg");
+  A = loadImage("sucess.jpeg");
+ f = loadImage("failure.jpeg");
+  
   //setting up gamemode images
  playgame.resize(289,525);
    
@@ -90,7 +92,6 @@ void draw() {
     program.display();
     if (frameCount - starttime > 240) {
       isdisplaying  = false;
-      
   
       }
   }
@@ -125,4 +126,6 @@ linedrawn+=1;
 
 
 //assests used
+//https://stock.adobe.com/ca/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bfetch_excluded_assets%5D=1&filters%5Binclude_stock_enterprise%5D=1&filters%5Bcontent_type%3Aimage%5D=1&order=relevance&limit=100&search_page=1&search_type=usertyped&acp=&aco=f+minus&k=f+minus&get_facets=0&asset_id=552854997
 //https://illugion.itch.io/pixel-keyboard-lite
+//https://stock.adobe.com/ca/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bfetch_excluded_assets%5D=1&filters%5Binclude_stock_enterprise%5D=1&filters%5Bcontent_type%3Aimage%5D=1&order=relevance&limit=100&search_page=1&search_type=usertyped&acp=&aco=a+plus+exam&k=a+plus+exam&get_facets=0&asset_id=1003852193

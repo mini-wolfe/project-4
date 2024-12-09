@@ -1,0 +1,12 @@
+class endstate {
+  PImage A;
+  endstate() {
+  
+  
+  }
+  void display() {
+    
+  
+  }
+  
+}
