@@ -138,5 +138,6 @@ linedrawn+=1;
 }
 
 
-//assests used
-//https://illugion.itch.io/pixel-keyboard-lite
+//assests used, image links 
+//https://stock.adobe.com/ca/search?k=a+plus&search_type=usertyped&asset_id=1003852193
+//https://stock.adobe.com/ca/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bfetch_excluded_assets%5D=1&filters%5Binclude_stock_enterprise%5D=1&filters%5Bcontent_type%3Aimage%5D=1&order=relevance&k=bad+grade&limit=100&search_page=1&search_type=visual-search-browse&acp=&aco=bad+grade&native_visual_search=6757e1c0c0249&similar_content_id=&model_id=&serie_id=&find_similar_by=all&get_facets=0&asset_id=552854997

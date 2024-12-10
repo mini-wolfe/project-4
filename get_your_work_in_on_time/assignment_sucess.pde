@@ -1,5 +1,7 @@
+//Class to decide between the two end states 
 class Endstate {
-PImage GRADE;
+
+  PImage GRADE;
   Endstate() {
   }
 
