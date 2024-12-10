@@ -21,7 +21,7 @@ class Particles {
   }
 
   void display() {
-    fill(206, 206, 202,40);
+    fill(206, 206, 202,60);
     rect(position.x, position.y, size, size);
   }
   void update() {
