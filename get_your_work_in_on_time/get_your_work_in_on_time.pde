@@ -145,7 +145,7 @@ void keyPressed() {
   codelist.add(new Gamemode());
   linedrawn+=1;
 }
-
+//rested array list, booleans and int line drawn 
 void reset() {
   codelist.clear();
   trains = false;

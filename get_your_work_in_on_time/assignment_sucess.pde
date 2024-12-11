@@ -8,6 +8,7 @@ class Endstate {
 
 
   void display () {
+    //display to change screen to eitherwin or los based on code completed with in time 
     imageMode(CENTER);
     fill(255);
     rect(0, 0, width, height);
