@@ -105,7 +105,7 @@ void draw() {
     if (frameCount - starttime > 240) {
       isdisplaying  = false;
       sadtrain = true;
-      }
+    }
     //loop for displaying and updating particles
     for (Particles p : particlelist) {
       p.display();
@@ -114,11 +114,11 @@ void draw() {
     //calling on objects in the array to display lines of "code" based on line drawn
     gamepage.display(linedrawn);
   }
-     if (linedrawn > 65 || sadtrain == true) {
-        trains = true;
-        isdisplaying = false;
-        gameend.display();
-      }
+  if (linedrawn > 65 || sadtrain == true) {
+    trains = true;
+    isdisplaying = false;
+    gameend.display();
+  }
 }
 
 
@@ -131,6 +131,11 @@ void mousePressed() {
       isdisplaying = true;
     }
   }
+  if (sadtrain == true || trains == true) {
+    if ( mouseX > width/2-50 && mouseX <width/2+50 && mouseY > 300 && mouseY < 360) {
+      reset();
+    }
+  }
 }
 void keyPressed() {
   //when key presesed display next copy from the array list untill line 17 then delete first image in the list and replace bottom image as the code moves upwardes
@@ -141,6 +146,12 @@ void keyPressed() {
   linedrawn+=1;
 }
 
+void reset() {
+  codelist.clear();
+  trains = false;
+  sadtrain = false;
+  linedrawn = 0;
+}
 
 //assests used, image links
 //https://stock.adobe.com/ca/search?k=a+plus&search_type=usertyped&asset_id=1003852193

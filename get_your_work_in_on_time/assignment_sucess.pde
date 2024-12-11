@@ -17,7 +17,10 @@ class Endstate {
     if (sadtrain == true) {
       image(F, width/2, height/2, 300, 300);
     }
-    fill(0);
+    fill(255,100,100);
     rect(width/2-50, 300, 100, 60);
+    fill(0);
+   textSize(30);
+    text("restart",width/2-45,350);
   }
 }
